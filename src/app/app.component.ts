@@ -1,8 +1,14 @@
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
-import { TabsPage } from './../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+
+import { HomePage } from '../pages/home/home';
+import { SummaryPage } from '../pages/summary/summary';
+import { MeasurementPage } from './../pages/measurement/measurement';
+import { DashboardPage } from './../pages/dashboard/dashboard';
+import { ProductPage } from './../pages/product/product';
+import { TabsPage } from './../pages/tabs/tabs';
 
 
 @Component({
@@ -20,7 +26,7 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Username', component: TabsPage,icon:'ios-contact-outline' },
-      { title: 'Order-id :', component:'',icon:'ios-cart-outline' },
+      { title: 'Order-id :', component:SummaryPage,icon:'ios-cart-outline' },
       { title: 'Home', component: TabsPage,icon:'ios-home-outline' },
       { title: 'Help', component: TabsPage,icon:'ios-help-circle-outline' },
       { title: 'Logout', component: TabsPage,icon:'ios-exit-outline' }

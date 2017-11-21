@@ -1,6 +1,3 @@
-import { TabsPage } from './../pages/tabs/tabs';
-import { MeasurementPage } from './../pages/measurement/measurement';
-import { DashboardPage } from './../pages/dashboard/dashboard';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -10,6 +7,10 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { SummaryPage } from '../pages/summary/summary';
+import { MeasurementPage } from './../pages/measurement/measurement';
+import { DashboardPage } from './../pages/dashboard/dashboard';
+import { ProductPage } from './../pages/product/product';
+import { TabsPage } from './../pages/tabs/tabs';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SummaryPage } from '../pages/summary/summary';
     DashboardPage,
     MeasurementPage,
     TabsPage,
-    SummaryPage
+    SummaryPage,
+    ProductPage
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,8 @@ import { SummaryPage } from '../pages/summary/summary';
     DashboardPage,
     MeasurementPage,
     TabsPage,
-    SummaryPage
+    SummaryPage,
+    ProductPage
   ],
   providers: [
     StatusBar,
