@@ -12,15 +12,19 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
   rootPage:any = TabsPage;
 
-   pages: Array<{title: string, component: any}>;
+   pages: Array<{title: string, component: any,icon:string}>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: TabsPage },
-          ];
+      { title: 'Username', component: TabsPage,icon:'ios-contact-outline' },
+      { title: 'Order-id :', component:'',icon:'ios-cart-outline' },
+      { title: 'Home', component: TabsPage,icon:'ios-home-outline' },
+      { title: 'Help', component: TabsPage,icon:'ios-help-circle-outline' },
+      { title: 'Logout', component: TabsPage,icon:'ios-exit-outline' }
+      ];
 
   }
 
