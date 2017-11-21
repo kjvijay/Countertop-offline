@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Dashboard</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding> 
+      <ion-card *ngFor="let tiles of dashboardTiles.Dashboard">
+        <img src= "{{ tiles.imageUrl }}"/>
+        <ion-card-content>
+          <ion-card-title>
+              <ion-grid>
+                  <ion-row>
+                    <ion-col width-100 text-center><h5>{{ tiles.name | uppercase }}</h5></ion-col>
+                  </ion-row>
+                  <ion-row>                      
+                      <ion-col width-100 text-center><button ion-button round small (click)="itemSelected(tiles.name)">Select</button></ion-col>
+                    </ion-row>
+                </ion-grid>
+            </ion-card-title>
+        </ion-card-content>
+      </ion-card>  
+</ion-content>

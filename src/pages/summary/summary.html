@@ -1,0 +1,122 @@
+<!--
+  Generated template for the SummaryPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+        <button ion-button menuToggle>
+                <ion-icon name="menu"></ion-icon>
+       </button>
+    <ion-title>Summary</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+           <ion-item>
+              <ion-label>Customer Details</ion-label>
+              <ion-toggle (ionChange)="openlst()" checked=true></ion-toggle>
+            </ion-item>
+            <ion-item>
+                <ion-label>Items</ion-label>
+                <ion-toggle (ionChange)="itemlst()" checked=true></ion-toggle>
+              </ion-item>
+      <ion-list id="cdTog" text-center>
+          <h6>Customer Details</h6>
+          <ion-item>
+               <ion-label color="primary" floating>First Name *</ion-label>
+               <ion-input></ion-input>
+          </ion-item>
+          <ion-item>
+               <ion-label color="primary" floating>Last Name *</ion-label>
+               <ion-input></ion-input>
+          </ion-item>
+          <ion-item>
+               <ion-label color="primary" floating>Customer Phone1 *</ion-label>
+               <ion-input></ion-input>
+          </ion-item>
+          <ion-item>
+               <ion-label color="primary" floating>Customer Email *</ion-label>
+               <ion-input></ion-input>
+          </ion-item>
+          <ion-item>
+               <ion-label color="primary" floating>Customer Address *</ion-label>
+               <ion-input></ion-input>
+          </ion-item>
+      </ion-list>
+      <ion-list id="itemTog">
+        <ion-item>
+            <ion-grid>
+                <ion-row>
+                    <h4><b><u>SURFACE</u></b> - HDI SOLID SURFACE</h4>
+                </ion-row>
+                <ion-row>
+                  <ion-col col-3>
+                      <img src="assets/imgs/solid-surface.png">
+                  </ion-col>
+                  <ion-col col-6>
+                      <p>Color : <b>Badlands</b></p>
+                      <p>Price : <b>$180/Sq.ft</b></p>
+                      <p>Total : <b>1 x 180</b></p>
+                  </ion-col>
+                  <ion-col col-3 text-center>
+                        <p>Qty</p>
+                        <ion-icon name="ios-add-outline" (click)="increment()"></ion-icon>
+                        <b padding-right padding-left>1</b> 
+                        <ion-icon name="ios-remove-outline" (click)="decrement()"></ion-icon>   
+                        <p><b>=$180.00</b></p>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-item>
+        <ion-item>
+            <ion-grid>
+                <ion-row>
+                    <h4><b><u>SURFACE</u></b> - HDI SOLID SURFACE</h4>
+                </ion-row>
+                <ion-row>
+                  <ion-col col-3>
+                      <img src="assets/imgs/granite.png">
+                  </ion-col>
+                  <ion-col col-6>
+                     
+                      <p>Color : <b>Badlands</b></p>
+                      <p>Price : <b>$180/Sq.ft</b></p>
+                      <p>Total : <b>1 x 180</b></p>
+                  </ion-col>
+                  <ion-col col-3 text-center>
+                        <p>Qty</p>
+                        <ion-icon name="ios-add-outline" (click)="increment()"></ion-icon>
+                        <b padding-right padding-left>1</b> 
+                        <ion-icon name="ios-remove-outline" (click)="decrement()"></ion-icon>   
+                        <p><b>=$180.00</b></p>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-item>
+            </ion-list>
+            <ion-list >
+            <ion-item>
+                  <ion-row>
+                      <ion-col offset-3 col-5>
+                          <p>Grand Total	: </p>
+                          <p>Admin Fees	: </p>
+                          <p>Discount	: </p>
+                          <p><b>----------------------</b></p>
+                          <p>Net Amount : </p>
+                          <p><b>----------------------</b></p>
+                      </ion-col>
+                      <ion-col col-4>
+                          <p><b>$472.00</b></p>
+                          <p><b>550.00</b></p>
+                          <p><b>10%</b></p>
+                          <p><b>------------</b></p>
+                          <p><b>$919.80</b></p>
+                          <p><b>------------</b></p>
+                      </ion-col>
+                  </ion-row>
+            </ion-item>
+            <button text-center col-12 ion-button margin-bottom>Place Order</button>
+      </ion-list>
+
+</ion-content>

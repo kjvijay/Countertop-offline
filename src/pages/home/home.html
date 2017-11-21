@@ -1,14 +1,33 @@
 <ion-header>
   <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
     <ion-title>
-      Ionic Blank
+      Home
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
+<p><span text-center><a><img id="remap_logo" style="width:62%; height:45px;" src="{{logo}}" class="center" alt=""></a></span></p>
+
+<p>
+    <ion-item>
+        <ion-label>Select Branch</ion-label>
+        <ion-select [(ngModel)]="branch">
+          <ion-option>Atlanta</ion-option>
+          <ion-option>Baltimore</ion-option>
+          <ion-option>Boston</ion-option>
+          <ion-option>Chicago</ion-option>
+          <ion-option>Denver</ion-option>
+          <ion-option>Houston</ion-option>
+        </ion-select>
+      </ion-item>
+  </p>   
   <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+      <button ion-button round class="center" icon-right (click)="goToDashboard()">
+          ENTER
+      </button>  
+  </p> 
 </ion-content>

@@ -1,0 +1,18 @@
+<ion-header>
+    <ion-navbar>
+            <button ion-button menuToggle>
+                    <ion-icon name="menu"></ion-icon>
+                  </button>
+      <ion-title>Measurement</ion-title>
+    </ion-navbar>
+  </ion-header>
+  <ion-content padding> 
+      <ion-list >
+          <ion-item col-12 text-center *ngFor="let tiles of dashboardTiles.Shapes">
+                <ion-thumbnail item-start>
+                    <img src= "{{ tiles.imageUrl }}"/>
+                </ion-thumbnail>
+                  <a text-wrap text-capitalize>{{ tiles.name}}</a>
+          </ion-item>
+      </ion-list>
+</ion-content>
