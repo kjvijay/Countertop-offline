@@ -1,0 +1,28 @@
+<ion-header>
+  
+    <ion-navbar>
+      <p><span text-center><a><img id="remap_logo" style="width:32%; height:35px;" src="{{logo}}" class="center" alt=""></a></span></p>
+      <ion-title>Countertop<br>Cambria</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+      <ion-list>
+          
+            <ion-item>
+              <ion-label floating>Username</ion-label>
+              <ion-input type="text" [(ngModel)]="userData.loginname"></ion-input>
+            </ion-item>
+          
+            <ion-item>
+              <ion-label floating>Password</ion-label>
+              <ion-input type="password" [(ngModel)]="userData.password" ></ion-input>
+            </ion-item>
+          
+          </ion-list>
+          <div col-12 text-center>
+              <button col-12 ion-button (click)="login()">Login</button>
+          </div>
+  </ion-content>

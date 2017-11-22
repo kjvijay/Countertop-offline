@@ -1,14 +1,17 @@
+// Services used
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+// Pages used
 import { HomePage } from '../pages/home/home';
 import { SummaryPage } from '../pages/summary/summary';
 import { MeasurementPage } from './../pages/measurement/measurement';
 import { DashboardPage } from './../pages/dashboard/dashboard';
 import { ProductPage } from './../pages/product/product';
 import { TabsPage } from './../pages/tabs/tabs';
+import { LoginPage } from '../pages/login/login';
 
 
 @Component({
@@ -16,7 +19,7 @@ import { TabsPage } from './../pages/tabs/tabs';
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
-  rootPage:any = TabsPage;
+  rootPage:any = LoginPage;
 
    pages: Array<{title: string, component: any,icon:string}>;
 
