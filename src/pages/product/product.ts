@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import data from '../../data/rawdata';
+import { Idata } from './../../data/data.interface';
+import { Component, OnInit } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
@@ -13,11 +15,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   selector: 'page-product',
   templateUrl: 'product.html',
 })
-export class ProductPage {
+export class ProductPage implements OnInit {
+  //dashboardTiles:{page:string, tiles:Idata[]}[];
+  dashboardTiles:Idata[];
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
-
+  
+  ngOnInit(){
+    this.dashboardTiles=data;
+   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProductPage');
   }

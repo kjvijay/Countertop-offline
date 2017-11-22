@@ -1,4 +1,9 @@
 page-measurement {
-
-
+     .item-ios ion-thumbnail ion-img,
+     .item-ios ion-thumbnail img,
+     .item-md ion-thumbnail ion-img, 
+     .item-md ion-thumbnail img {
+                    width: 85px;
+                    height: 80px;
+                 }
 }

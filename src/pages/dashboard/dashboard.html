@@ -13,11 +13,18 @@
           <ion-card-title>
               <ion-grid>
                   <ion-row>
-                    <ion-col width-100 text-center><h5>{{ tiles.name | uppercase }}</h5></ion-col>
+                      <ion-col width-100 text-center (click)="itemSelected(tiles.name)">
+                          <!-- <ion-col width-100 text-center><h5>{{ tiles.name | uppercase }}</h5> -->
+                          <button ion-button round small >{{ tiles.name | uppercase }} 
+                              &#160;<ion-icon name="md-arrow-dropright">
+                              </ion-icon>
+                          </button>
+                          
+                      </ion-col>
                   </ion-row>
-                  <ion-row>                      
-                      <ion-col width-100 text-center><button ion-button round small (click)="itemSelected(tiles.name)">Select</button></ion-col>
-                    </ion-row>
+                  <!-- <ion-row>                      
+                      <ion-col width-100 text-center><button ion-button round small  style="cursor:pointer;">Select</button></ion-col>
+                    </ion-row> -->
                 </ion-grid>
             </ion-card-title>
         </ion-card-content>
