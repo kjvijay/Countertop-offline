@@ -5,13 +5,14 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-content>
-    <ion-list>
-              <ion-item *ngFor="let p of pages" (click)="openPage(p)">
+  <ion-content style="background-color:#dedede;">
+    <ion-list style="background-color:#dedede;">
+              <ion-item *ngFor="let p of pages" (click)="openPage(p)" style="background-color:#dedede;">
                   <ion-avatar item-start>
-                    <ion-icon style="font-size:35px;" name="{{p.icon}}"></ion-icon>
+                    <ion-icon style="font-size:35px;font-weight:600" name="{{p.icon}}"></ion-icon>
                   </ion-avatar>
-                  <button ion-button clear color="dark">
+                  
+                  <button ion-button clear color="dark" style="background-color:#dedede;font-weight:600">
                       {{p.title | uppercase}}
                   </button>
                 </ion-item>
