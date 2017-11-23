@@ -7,15 +7,15 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding> 
-      <ion-card *ngFor="let tiles of dashboardTiles.Dashboard">
-        <img src= "{{ tiles.imageUrl }}"/>
+      <ion-card *ngFor="let tiles of category">
+        <img src= "https://s3-us-west-2.amazonaws.com/remap-countertop/dashboard/{{ tiles.image }}"/>
         <ion-card-content>
           <ion-card-title>
               <ion-grid>
                   <ion-row>
-                      <ion-col width-100 text-center (click)="itemSelected(tiles.name)">
+                      <ion-col width-100 text-center (click)="itemSelected(tiles.product_name)">
                           <!-- <ion-col width-100 text-center><h5>{{ tiles.name | uppercase }}</h5> -->
-                          <button ion-button round small >{{ tiles.name | uppercase }} 
+                          <button ion-button round small>{{ tiles.product_name}} 
                               &#160;<ion-icon name="md-arrow-dropright">
                               </ion-icon>
                           </button>
