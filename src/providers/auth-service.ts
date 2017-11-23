@@ -10,6 +10,7 @@ import 'rxjs/add/operator/map';
 */
 
 let apiUrl = 'http://qa.facelifters.com/staging/countertop-offline/api/v1/login/';
+let branchUrl = 'http://qa.facelifters.com/staging/countertop-offline/api/v1/branch';
 @Injectable()
 export class AuthService {
 
@@ -23,6 +24,24 @@ export class AuthService {
       headers.append('content-type', 'application/json');
       headers.append('secret-apikey','bG9naW5AMjAxNw==');
       this.http.post(apiUrl , JSON.stringify(credentials), {headers: headers})
+        .subscribe(res => {
+          resolve(res.json());
+        }, (err) => {
+          console.log(err);
+          reject(err);
+        });
+       
+    });
+
+  }
+
+  getBranch() {
+    return new Promise((resolve, reject) => {
+      let headers = new Headers();
+      headers.append('cache-control','no-cache');
+      headers.append('content-type', 'application/json');
+      headers.append('secret-apikey','YnJhbmNoQDIwMTc==');
+      this.http.get(branchUrl , {headers: headers})
         .subscribe(res => {
           resolve(res.json());
         }, (err) => {

@@ -12,19 +12,15 @@
 <ion-content padding>
 <p><span text-center><a><img id="remap_logo" style="width:62%; height:45px;" src="{{logo}}" class="center" alt=""></a></span></p>
 
-<p>
+<h5 padding>
+    Select Branch :
     <ion-item>
-        <ion-label>Select Branch</ion-label>
-        <ion-select [(ngModel)]="branch">
-          <ion-option>Atlanta</ion-option>
-          <ion-option>Baltimore</ion-option>
-          <ion-option>Boston</ion-option>
-          <ion-option>Chicago</ion-option>
-          <ion-option>Denver</ion-option>
-          <ion-option>Houston</ion-option>
+          <ion-select col-12 [(ngModel)]="tblbranch">
+          
+          <ion-option col-12 *ngFor="let obj of branch" [value]="obj.branch">{{obj.branch}}</ion-option>
         </ion-select>
       </ion-item>
-  </p>   
+</h5>   
   <p>
       <button ion-button round class="center" icon-right (click)="goToDashboard()">
           ENTER
